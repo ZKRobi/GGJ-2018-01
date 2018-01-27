@@ -13,7 +13,7 @@ public static class GameGlobals
         _remainingTime -= time;
     }
 
-    public static void AddItemToTransfer(Transferrable transferredItem)
+    public static void AddItemToTransfer(ITransferrable transferredItem)
     {
         _transferredItemList.Add(transferredItem.GetTransferData());
         ReduceTime(10); //TODO: item time cost
