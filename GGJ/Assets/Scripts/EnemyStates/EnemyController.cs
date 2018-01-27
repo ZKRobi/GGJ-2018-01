@@ -13,13 +13,13 @@ public class EnemyController : MonoBehaviour {
 
 	private Rigidbody myRigidbody;
 	public float moveSpeed;
-	public Player thePlayer;
+	public PlayerController thePlayer;
 	#endregion
 
 	#region Unity Methods
 	void Start () {
 		myRigidbody = GetComponent<Rigidbody>();
-		thePlayer = FindObjectOfType<Player>();
+		thePlayer = FindObjectOfType<PlayerController>();
 	}
 	void FixedUpdate()
 	{
