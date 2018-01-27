@@ -17,6 +17,7 @@ public class Gun : MonoBehaviour {
     public float roundsPerMin;
     public Transform shellEjectionPoint;
     public Rigidbody shell;
+    public Transform shellParentObject;
     private float secondsBetweenShots;
     private float nextPossibleShootTime;
     private LineRenderer tracer;
@@ -63,8 +64,8 @@ public class Gun : MonoBehaviour {
                 StartCoroutine("RenderTracer", ray.direction * shotDistance);
             }
 
-            Rigidbody newShell = Instantiate(shell, shellEjectionPoint.position, Quaternion.identity) as Rigidbody;
-            newShell.AddForce(shellEjectionPoint.forward * Random.Range(150f, 200f) );
+            Rigidbody newShell = Instantiate(shell, shellEjectionPoint.position, Quaternion.identity, shellParentObject) as Rigidbody;
+            newShell.AddForce(shellEjectionPoint.forward * Random.Range(150f, 200f) + bulletSpawn.forward * Random.Range(-10f,10f));
         }
     }
 
