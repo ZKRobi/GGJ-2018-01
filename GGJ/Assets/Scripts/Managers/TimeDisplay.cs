@@ -8,6 +8,7 @@ public class TimeDisplay : MonoBehaviour {
 
     private bool _player_moved;
     private bool _ever_moved;
+    public static bool _in_finish_zone;
     public Text _time_dispaly;
 
 
@@ -16,6 +17,7 @@ public class TimeDisplay : MonoBehaviour {
         GameGlobals._remainingTime = 600.0f;
         _player_moved = false;
         _ever_moved = false;
+        _in_finish_zone = false;
         _time_dispaly.text = "Move to START";
     }
 
@@ -27,7 +29,7 @@ public class TimeDisplay : MonoBehaviour {
             CheckPlayerMoved();
         }
 
-        if (_player_moved)
+        if (_player_moved && !_in_finish_zone)
         {
             GameGlobals.ReduceTime(Time.deltaTime);
             _time_dispaly.text = ((int)GameGlobals._remainingTime) + " seconds remaining";
