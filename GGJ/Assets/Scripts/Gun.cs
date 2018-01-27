@@ -8,36 +8,39 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
-public class Gun : MonoBehaviour {
+public class Gun : MonoBehaviour
+{
 
-	#region Variables
-	public Transform bulletSpawn;
-	public enum GunType{Semi, Burst, Auto};
-	public GunType gunType;
+    #region Variables
+    public Transform bulletSpawn;
+    public enum GunType { Semi, Burst, Auto };
+    public GunType gunType;
     public float roundsPerMin;
     public Transform shellEjectionPoint;
     public Rigidbody shell;
     private float secondsBetweenShots;
     private float nextPossibleShootTime;
     private LineRenderer tracer;
-	#endregion
+    #endregion
 
-	#region Unity Methods
-	void Start () {
+    #region Unity Methods
+    void Start()
+    {
         secondsBetweenShots = 60 / roundsPerMin;
-        if (GetComponent < LineRenderer>())
+        if (GetComponent<LineRenderer>())
         {
             tracer = GetComponent<LineRenderer>();
         }
-	}
-	
-	void Update () {
-		
-	}
-	#endregion
-	
-	public void Shoot()
-	{
+    }
+
+    void Update()
+    {
+
+    }
+    #endregion
+
+    public void Shoot()
+    {
         if (CanShoot())
         {
 
@@ -63,24 +66,24 @@ public class Gun : MonoBehaviour {
                 StartCoroutine("RenderTracer", ray.direction * shotDistance);
             }
 
-            Rigidbody newShell = Instantiate(shell, shellEjectionPoint.position, Quaternion.identity) as Rigidbody;
-            newShell.AddForce(shellEjectionPoint.forward * Random.Range(150f, 200f) );
+            Rigidbody newShell = Instantiate(shell, shellEjectionPoint.position, shellEjectionPoint.rotation) as Rigidbody;
+            newShell.AddRelativeForce(Vector3.forward);// * Random.Range(150f, 200f));
         }
     }
 
-	public void ShootContinoues()
-	{
-		if (gunType == GunType.Auto)
-		{
-			Shoot();
-		}
-		
-	}
+    public void ShootContinoues()
+    {
+        if (gunType == GunType.Auto)
+        {
+            Shoot();
+        }
+
+    }
     private bool CanShoot()
     {
         bool canShoot = true;
 
-        if (Time.time == nextPossibleShootTime )
+        if (Time.time <= nextPossibleShootTime)
         {
             canShoot = false;
         }
