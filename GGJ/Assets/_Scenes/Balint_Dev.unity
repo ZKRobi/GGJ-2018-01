@@ -330,7 +330,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4176216229701232, guid: 1009ea8ecb4cdd34c93752b56ffa4c50, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4176216229701232, guid: 1009ea8ecb4cdd34c93752b56ffa4c50, type: 2}
       propertyPath: m_LocalRotation.x
@@ -354,7 +354,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1799557203254782, guid: 1009ea8ecb4cdd34c93752b56ffa4c50, type: 2}
       propertyPath: m_Name
-      value: floor_tile01 (6)
+      value: moving_platform_horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 95559486236550918, guid: 1009ea8ecb4cdd34c93752b56ffa4c50,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 687558757dea9704b8d8bf4ef9652810, type: 2}
+    - target: {fileID: 95559486236550918, guid: 1009ea8ecb4cdd34c93752b56ffa4c50,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1009ea8ecb4cdd34c93752b56ffa4c50, type: 2}
@@ -658,6 +668,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1686207333333134, guid: cd3ad1846ac35d348bca66480e5adf91,
     type: 2}
   m_PrefabInternal: {fileID: 389487427}
+--- !u!114 &1334607095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334607087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d01f0452199e0e439959664e88691ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _finish_zone: {fileID: 2078989536}
 --- !u!1 &1392041267
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,9 +1008,8 @@ GameObject:
   - component: {fileID: 2078989539}
   - component: {fileID: 2078989538}
   - component: {fileID: 2078989537}
-  - component: {fileID: 2078989541}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Finish_Zone
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1060,15 +1081,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2078989541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2078989536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c64808ff5137c9044a583750e5b0468a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1334607087}
