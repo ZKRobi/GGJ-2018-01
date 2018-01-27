@@ -22,7 +22,7 @@ public class AddToTransfer : MonoBehaviour
             Debug.Log("transferring");
             _transferDone = true;
 
-            GameGlobals.AddItemToTransfer(GameObject.Find("TransferredObject").GetComponent<Transferrable>());
+            GameGlobals.AddItemToTransfer(GameObject.Find("TransferrableObject").GetComponent<ITransferrable>());
 
             SceneManager.LoadScene("Robi_Dev2");
         }
