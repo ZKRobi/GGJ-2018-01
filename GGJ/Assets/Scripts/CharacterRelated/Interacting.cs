@@ -18,11 +18,11 @@ public class Interacting : MonoBehaviour
         RaycastHit hitInfo;
         var canInteract = Physics.Raycast(this.transform.position, this.transform.forward, out hitInfo, interactionDistance, 1 << 10);
 
-        Debug.DrawRay(this.transform.position, this.transform.forward * interactionDistance, Color.red);
-
         if (canInteract)
         {
             var other = hitInfo.transform.gameObject.GetComponent<Interactible>();
+
+            other.doHighlight = true;
 
             if (Input.GetKey(KeyCode.Q))//TODO: configurabe
             {
