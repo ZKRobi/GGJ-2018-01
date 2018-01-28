@@ -460,7 +460,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -540,12 +540,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelMusicChangeArray:
   - {fileID: 0}
-  - {fileID: 8300000, guid: 384ebbc6f7a09ea43aec41f81e3a083c, type: 3}
   - {fileID: 0}
-  - {fileID: 8300000, guid: 7c8df8bf150e4ae4a8a1b73094db0242, type: 3}
-  - {fileID: 8300000, guid: 7c8df8bf150e4ae4a8a1b73094db0242, type: 3}
-  - {fileID: 8300000, guid: 7c8df8bf150e4ae4a8a1b73094db0242, type: 3}
-  - {fileID: 8300000, guid: 7c8df8bf150e4ae4a8a1b73094db0242, type: 3}
+  - {fileID: 8300000, guid: acace5642b6bb8047b32641f1e03972c, type: 3}
+  - {fileID: 8300000, guid: acace5642b6bb8047b32641f1e03972c, type: 3}
+  - {fileID: 8300000, guid: acace5642b6bb8047b32641f1e03972c, type: 3}
+  - {fileID: 8300000, guid: acace5642b6bb8047b32641f1e03972c, type: 3}
+  - {fileID: 8300000, guid: acace5642b6bb8047b32641f1e03972c, type: 3}
+  - {fileID: 0}
 --- !u!4 &798246468
 Transform:
   m_ObjectHideFlags: 0
