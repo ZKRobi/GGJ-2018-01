@@ -5,6 +5,9 @@ using UnityEngine;
 public class Pickupable : Interactible
 {
     public Transform[] itemHolders;
+    Color baseColor;
+    Color highlightColor;
+    MeshRenderer _meshrenderer;
 
     public override void Interact(GameObject source, int slot)
     {
@@ -18,12 +21,22 @@ public class Pickupable : Interactible
     // Use this for initialization
     void Start()
     {
-
+        _meshrenderer = this.GetComponentInChildren<MeshRenderer>();
+        baseColor = _meshrenderer.material.color;
+        highlightColor = new Color(baseColor.r + 0.1f, baseColor.g + 0.1f, baseColor.b + 0.1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Highlight();
+        if (highlighted)
+        {
+            _meshrenderer.material.color = highlightColor;
+        }
+        else
+        {
+            _meshrenderer.material.color = baseColor;
+        }
     }
 }
