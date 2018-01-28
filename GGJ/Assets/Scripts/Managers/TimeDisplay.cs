@@ -4,48 +4,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimeDisplay : MonoBehaviour {
+public class TimeDisplay : MonoBehaviour
+{
 
-    private bool _player_moved;
     private bool _ever_moved;
-    public static bool _in_finish_zone;
     public Text _time_dispaly;
 
 
     // Use this for initialization
-    void Start() {
-        GameGlobals._remainingTime = 600.0f;
-        _player_moved = false;
+    void Start()
+    {
         _ever_moved = false;
-        _in_finish_zone = false;
         _time_dispaly.text = "Move to START";
     }
 
     // Update is called once per frame
-    void Update() {
-
-        if(!_ever_moved)
+    void Update()
+    {
+        if (!_ever_moved)
         {
             CheckPlayerMoved();
         }
-
-        if (_player_moved && !_in_finish_zone)
+        else if (GameGlobals.timeRunning)
         {
             GameGlobals.ReduceTime(Time.deltaTime);
-            _time_dispaly.text = ((int)GameGlobals._remainingTime) + " seconds remaining";
+            _time_dispaly.text = ((int)GameGlobals.remainingTime) + " seconds remaining";
         }
-        
-	}
+    }
 
     private void CheckPlayerMoved()
     {
 
-        if( Input.GetKeyDown("w") ||
+        if (Input.GetKeyDown("w") ||
             Input.GetKeyDown("a") ||
             Input.GetKeyDown("s") ||
             Input.GetKeyDown("d"))
         {
-            _player_moved = true;
             _ever_moved = true;
         }
     }
