@@ -6,7 +6,7 @@ public class Transmitter : Interactible
 {
     public GameObject UI;
 
-    public override void Interact(GameObject source)
+    public override void Interact(GameObject source, int slot)
     {
         if (!interactionRequested && !interacting)
         {

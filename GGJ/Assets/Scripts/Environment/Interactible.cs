@@ -9,7 +9,7 @@ public abstract class Interactible : MonoBehaviour
     protected GameObject interactionSource;
     protected bool interacting;
 
-    public abstract void Interact(GameObject source);
+    public abstract void Interact(GameObject source, int slot);
 
     public virtual void StopInteracting() { }
 }
