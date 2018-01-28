@@ -7,13 +7,20 @@ public class MovingPlatform : MonoBehaviour {
     public GameObject platform;
     public PlayerController player;
 
-    private void OnTriggerEnter()
+
+    private void OnTriggerEnter(Collider other)
     {
-        player.transform.parent = platform.transform;
+        if(other.CompareTag("Player") || other.CompareTag("Enemy"))
+        {
+            other.transform.parent = platform.transform;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        player.transform.parent = null;
+        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        {
+            other.transform.parent = null;
+        }
     }
 }

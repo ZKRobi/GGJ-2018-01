@@ -10,7 +10,7 @@ public class FinishTrigger : MonoBehaviour {
     {
         if (other.CompareTag("Finish"))
         {
-            TimeDisplay._in_finish_zone = true;
+            
         }
     }
 
@@ -18,7 +18,7 @@ public class FinishTrigger : MonoBehaviour {
     {
         if (other.CompareTag("Finish"))
         {
-            TimeDisplay._in_finish_zone = false;
+            
         }
     }
 
