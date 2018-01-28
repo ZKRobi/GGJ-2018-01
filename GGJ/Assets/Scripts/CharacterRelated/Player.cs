@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	private Vector3 moveInput;
 	private Vector3 moveVelocity;
 	private Camera mainCamera;
-	public GunController theGun;
+	//public GunController theGun;
 
 	public bool useController;
 	#endregion
@@ -46,11 +46,11 @@ public class Player : MonoBehaviour {
 			}
 			if (Input.GetMouseButtonDown(0))
 			{
-				theGun.isFiring = true;
+				//theGun.isFiring = true;
 			}
 			if (Input.GetMouseButtonUp(0))
 			{
-				theGun.isFiring = false;
+				//theGun.isFiring = false;
 			}
 		}
 
@@ -65,12 +65,12 @@ public class Player : MonoBehaviour {
 
 			if (Input.GetKeyDown(KeyCode.JoystickButton5))
 			{
-				theGun.isFiring = true;
+				//theGun.isFiring = true;
 			}
 
 			if (Input.GetKeyUp(KeyCode.JoystickButton5))
 			{
-				theGun.isFiring = false;
+				//theGun.isFiring = false;
 			}
 		}
 	}
