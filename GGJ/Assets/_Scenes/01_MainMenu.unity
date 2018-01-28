@@ -2380,7 +2380,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: GAME NAME
+  m_text: SPACE LOOTERz
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd3586fe6e1d760478155b003f8f199b, type: 2}
   m_sharedMaterial: {fileID: 21552285847597170, guid: dd3586fe6e1d760478155b003f8f199b,
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_margin: {x: 3.0012243, y: 0, z: -1.8934063, w: 1.377429}
   m_textInfo:
     textComponent: {fileID: 487923032}
-    characterCount: 9
+    characterCount: 13
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -3974,7 +3974,7 @@ RectTransform:
   m_Father: {fileID: 1582995863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.00000011920929}
   m_AnchorMax: {x: 1, y: 0.9999999}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -5780,7 +5780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000019073486}
+  m_AnchoredPosition: {x: 0, y: -0.000049591064}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &987923965
@@ -10209,7 +10209,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 770425086}
   m_HandleRect: {fileID: 770425085}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -13342,7 +13342,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1617717481403666, guid: 8042def586ae47945b6346c448a5a86e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8042def586ae47945b6346c448a5a86e, type: 2}
