@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: b745ae72574b34c43beb0494800339d5
-timeCreated: 1517151310
+guid: cc40c4b6f99702f479de40ca405e8f52
+timeCreated: 1517151904
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: turret1B
-    100002: //RootNode
-    400000: turret1B
-    400002: //RootNode
-    2100000: turret1BMat
-    2300000: turret1B
-    3300000: turret1B
-    4300000: turret1B
+    100000: //RootNode
+    100002: wall1
+    400000: //RootNode
+    400002: wall1
+    2100000: wall1Mat
+    2300000: wall1
+    3300000: wall1
+    4300000: wall1
   externalObjects: {}
   materials:
     importMaterials: 1
