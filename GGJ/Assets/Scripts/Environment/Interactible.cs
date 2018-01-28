@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Interactible : MonoBehaviour
 {
+    public bool doHighlight;
+    protected bool highlighted;
 
     protected bool interactionRequested;
     protected GameObject interactionSource;
@@ -12,4 +14,19 @@ public abstract class Interactible : MonoBehaviour
     public abstract void Interact(GameObject source, int slot);
 
     public virtual void StopInteracting() { }
+
+    protected void Highlight()
+    {
+        Debug.Log(doHighlight);
+        if (doHighlight)
+        {
+            highlighted = true;
+        }
+        else
+        {
+            highlighted = false;
+        }
+
+        doHighlight = false;
+    }
 }
