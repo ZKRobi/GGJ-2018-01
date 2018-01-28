@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4190624690620940}
   - component: {fileID: 33704325827350704}
   - component: {fileID: 23232557419197994}
+  - component: {fileID: 65146816135710682}
   m_Layer: 0
   m_Name: floor2
   m_TagString: Untagged
@@ -51,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1794494594483528}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children: []
   m_Father: {fileID: 4869444729026558}
   m_RootOrder: 0
@@ -64,7 +65,7 @@ Transform:
   m_GameObject: {fileID: 1836695297855254}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4190624690620940}
   m_Father: {fileID: 0}
@@ -111,3 +112,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1794494594483528}
   m_Mesh: {fileID: 4300000, guid: cc40c4b6f99702f479de40ca405e8f52, type: 3}
+--- !u!65 &65146816135710682
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794494594483528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.999998, y: 4.9999995, z: 29.999998}
+  m_Center: {x: 0, y: 2.4999998, z: 0}
