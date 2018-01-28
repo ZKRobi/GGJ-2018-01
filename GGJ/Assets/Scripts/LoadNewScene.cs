@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewScene : MonoBehaviour
 {
-    public GameObject itemHolder;
+    public GameObject buttonHolder;
 
     // Use this for initialization
     void Start()
@@ -21,7 +21,7 @@ public class LoadNewScene : MonoBehaviour
 
     public void TransferItemsAndLoadNewScene(string nextScene)
     {
-        foreach (var item in itemHolder.GetComponentsInChildren<AddToTransfer>())
+        foreach (var item in buttonHolder.GetComponentsInChildren<AddToTransfer>())
         {
             if (item.transferring)
             {
