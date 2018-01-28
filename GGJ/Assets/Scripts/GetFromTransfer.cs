@@ -21,6 +21,7 @@ public class GetFromTransfer : MonoBehaviour
                 {
                     newObj = GameObject.Instantiate(prefab);
                     newObj.GetComponent<ITransferrable>().Initialize(item);
+                    break;
                 }
             }
             if (newObj != null)
