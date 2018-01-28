@@ -24,9 +24,13 @@ public class Interacting : MonoBehaviour
         {
             var other = hitInfo.transform.gameObject.GetComponent<Interactible>();
 
-            if (Input.GetKey(KeyCode.Alpha0))//TODO: input
+            if (Input.GetKey(KeyCode.Q))//TODO: configurabe
             {
-                other.Interact(this.gameObject);
+                other.Interact(this.gameObject, 0);
+            }
+            else if (Input.GetKey(KeyCode.E))//TODO: configurable
+            {
+                other.Interact(this.gameObject, 1);
             }
         }
     }
