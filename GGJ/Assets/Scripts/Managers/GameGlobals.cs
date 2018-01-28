@@ -4,13 +4,14 @@ using UnityEngine;
 
 public static class GameGlobals
 {
-    public static float _remainingTime;
+    public static float remainingTime = 600f;
+    public static bool timeRunning = true;
     private static List<TransferData> _transferredItemList = new List<TransferData>();
 
 
     public static void ReduceTime(float time)
     {
-        _remainingTime -= time;
+        remainingTime -= time;
     }
 
     public static void AddItemToTransfer(ITransferrable transferredItem)
