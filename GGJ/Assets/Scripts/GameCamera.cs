@@ -22,7 +22,7 @@ public class GameCamera : MonoBehaviour {
 	
 	void FixedUpdate () {
 		cameraTarget = new Vector3(target.position.x, transform.position.y, target.position.z);
-		transform.position = Vector3.Lerp(transform.position, cameraTarget, Time.deltaTime * 8);
+		transform.position = Vector3.Lerp(transform.position, cameraTarget, Time.deltaTime * 20);
 	}
 	#endregion
 	

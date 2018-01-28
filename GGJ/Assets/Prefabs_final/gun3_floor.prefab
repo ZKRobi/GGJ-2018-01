@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4209642190325630}
+  - component: {fileID: 114985127977335584}
   m_Layer: 0
   m_Name: gun3_floor
   m_TagString: Untagged
@@ -51,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1569489368286752}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4913574094887332}
   m_Father: {fileID: 0}
@@ -111,3 +112,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171372576152434}
   m_Mesh: {fileID: 4300000, guid: 45e98880020a8b345895f472b4eb93ec, type: 3}
+--- !u!114 &114985127977335584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569489368286752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f46a29180814e499e482d8da9e576b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _item: {fileID: 4209642190325630}
