@@ -1,19 +1,26 @@
 fileFormatVersion: 2
-guid: 49aee5b10e8d8684899fdcd2d31c5683
-timeCreated: 1517065096
+guid: 4385ef75874878f45aab1f7f21121682
+timeCreated: 1517116199
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: spacer1
+    100000: default
     100002: //RootNode
-    400000: spacer1
+    400000: default
     400002: //RootNode
-    2100000: spacer1Mat
-    2300000: spacer1
-    3300000: spacer1
-    4300000: spacer1
-  externalObjects: {}
+    2100000: defaultMat
+    2100002: palette
+    2300000: default
+    3300000: default
+    4300000: default
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat
+    second: {fileID: 2100000, guid: 9f68e0d18c24b3f4795c20be98468413, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -25,14 +32,15 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -73,7 +81,17 @@ ModelImporter:
   humanDescription:
     serializedVersion: 2
     human: []
-    skeleton: []
+    skeleton:
+    - name: spacer1-00(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: default
+      parentName: spacer1-00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -87,7 +105,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
