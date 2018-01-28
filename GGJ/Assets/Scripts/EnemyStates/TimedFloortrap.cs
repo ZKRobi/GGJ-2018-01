@@ -27,6 +27,7 @@ public class TimedFloortrap : MonoBehaviour
         {
             nextToggle += isActive ? offTime : onTime;
             isActive = !isActive;
+            
             animator.SetBool("IsActive", isActive);
         }
     }
