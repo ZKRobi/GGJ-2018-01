@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface ITransferrable
 {
-    TransferData GetTransferData();
+    TransferData GetTransferData(int slot);
+    float GetTransferCost();
     void Initialize(TransferData data);
 }

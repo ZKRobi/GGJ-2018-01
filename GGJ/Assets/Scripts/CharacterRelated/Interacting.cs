@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interacting : MonoBehaviour
 {
+    public float interactionDistance = 40;
 
     // Use this for initialization
     void Start()
@@ -15,7 +16,9 @@ public class Interacting : MonoBehaviour
     void Update()
     {
         RaycastHit hitInfo;
-        var canInteract = Physics.BoxCast(this.transform.position, new Vector3(10, 10, 10), this.transform.forward, out hitInfo, Quaternion.identity, 40, 1 << 10);
+        var canInteract = Physics.Raycast(this.transform.position, this.transform.forward, out hitInfo, interactionDistance, 1 << 10);
+
+        Debug.DrawRay(this.transform.position, this.transform.forward * interactionDistance, Color.red);
 
         if (canInteract)
         {

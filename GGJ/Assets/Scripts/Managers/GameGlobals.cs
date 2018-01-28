@@ -14,10 +14,10 @@ public static class GameGlobals
         remainingTime -= time;
     }
 
-    public static void AddItemToTransfer(ITransferrable transferredItem)
+    public static void AddItemToTransfer(ITransferrable transferredItem, int slot)
     {
-        _transferredItemList.Add(transferredItem.GetTransferData());
-        ReduceTime(10); //TODO: item time cost
+        _transferredItemList.Add(transferredItem.GetTransferData(slot));
+        ReduceTime(transferredItem.GetTransferCost()); //TODO: item time cost
     }
 
     public static List<TransferData> PopItemTransfer()

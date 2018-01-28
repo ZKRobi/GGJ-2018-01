@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class AddToTransfer : MonoBehaviour
 {
     public bool transferring = false;
-    public GameObject item;
+    public int slot;
+    public GameObject itemSource;
 
     private Text _text;
 
@@ -26,11 +24,25 @@ public class AddToTransfer : MonoBehaviour
     public void ToggleTransfer()
     {
         transferring = !transferring;
-        _text.text = transferring ? "item" : "(item)";
+        RefreshText();
+    }
+
+    public void RefreshText()
+    {
+        var item = itemSource.GetComponentInChildren<ITransferrable>();
+        if (item != null)
+        {
+            var name = ((MonoBehaviour)item).gameObject.name;
+            _text.text = transferring ? name : "(" + name + ")";
+        }
     }
 
     public void Transfer()
     {
-        GameGlobals.AddItemToTransfer(item.GetComponent<ITransferrable>());
+        var item = itemSource.GetComponentInChildren<ITransferrable>();
+        if (item != null)
+        {
+            GameGlobals.AddItemToTransfer(item, slot);
+        }
     }
 }

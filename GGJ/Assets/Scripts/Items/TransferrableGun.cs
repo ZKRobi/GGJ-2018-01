@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestTransferrable : MonoBehaviour, ITransferrable
+public class TransferrableGun : MonoBehaviour, ITransferrable
 {
     public float GetTransferCost()
     {
@@ -13,15 +13,14 @@ public class TestTransferrable : MonoBehaviour, ITransferrable
     {
         return new TransferData()
         {
-            name = "TransferrableObject",
-            data = new Dictionary<string, object> { { "posX", 1f } },
+            name = "Weapon",
             targetSlot = slot
         };
     }
 
     public void Initialize(TransferData data)
     {
-        transform.position = new Vector3((float)data.data["posX"], transform.position.y, transform.position.z);
+
     }
 
     // Use this for initialization
