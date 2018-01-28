@@ -15,20 +15,32 @@ public class Player : MonoBehaviour {
 	private Vector3 moveInput;
 	private Vector3 moveVelocity;
 	private Camera mainCamera;
+    private Animator animator;
 	//public GunController theGun;
 
 	public bool useController;
-	#endregion
+    #endregion
 
-	#region Unity Methods
-	void Start () {
-		myRigidbody = GetComponent<Rigidbody>();
-		mainCamera = FindObjectOfType<Camera>();
+    #region Unity Methods
+    void Start() {
+        myRigidbody = GetComponent<Rigidbody>();
+        mainCamera = FindObjectOfType<Camera>();
+        animator = GetComponent<Animator>();
 	}
 	
 	void Update () {
 		moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-		moveVelocity = moveInput * moveSpeed;
+
+        if (moveInput != null)
+        {
+            animator.SetBool("isMove", true);
+            moveVelocity = moveInput * moveSpeed;
+        }
+        else if (moveInput == null)
+        {
+            animator.SetBool("isMove", false);
+        }
+        
 
 		//Rotate with Mouse
 		if (!useController)
@@ -46,12 +58,16 @@ public class Player : MonoBehaviour {
 			}
 			if (Input.GetMouseButtonDown(0))
 			{
-				//theGun.isFiring = true;
-			}
+                //theGun.isFiring = true;
+                animator.SetBool("isShoot", true);
+            }
 			if (Input.GetMouseButtonUp(0))
 			{
-				//theGun.isFiring = false;
-			}
+                //theGun.isFiring = false;
+                animator.SetBool("isShoot", false);
+
+            }
+          
 		}
 
 		//Rotate with Controller
