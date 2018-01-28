@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Interactible : MonoBehaviour
 {
+    [HideInInspector]
     public bool doHighlight;
     protected bool highlighted;
 
@@ -17,7 +18,6 @@ public abstract class Interactible : MonoBehaviour
 
     protected void Highlight()
     {
-        Debug.Log(doHighlight);
         if (doHighlight)
         {
             highlighted = true;

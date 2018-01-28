@@ -19,8 +19,10 @@ public class LoadNewScene : MonoBehaviour
 
     }
 
-    public void TransferItemsAndLoadNewScene(string nextScene)
+    public void TransferItemsAndLoadNewScene()
     {
+        string nextScene = GameObject.FindGameObjectWithTag("EndZone").GetComponent<Transmitter>().nextScene;
+
         foreach (var item in buttonHolder.GetComponentsInChildren<AddToTransfer>())
         {
             if (item.transferring)

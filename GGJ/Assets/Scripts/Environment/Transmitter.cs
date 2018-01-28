@@ -8,6 +8,7 @@ public class Transmitter : Interactible
     Color baseColor;
     Color highlightColor;
     MeshRenderer _meshrenderer;
+    public string nextScene;
 
     public override void Interact(GameObject source, int slot)
     {
@@ -28,7 +29,7 @@ public class Transmitter : Interactible
     {
         _meshrenderer = this.GetComponentInChildren<MeshRenderer>();
         baseColor = _meshrenderer.material.color;
-        highlightColor = new Color(baseColor.r + 0.1f, baseColor.g + 0.1f, baseColor.b + 0.1f);
+        highlightColor = Color.red;//new Color(baseColor.r + 0.1f, baseColor.g + 0.1f, baseColor.b + 0.1f);
     }
 
     // Update is called once per frame

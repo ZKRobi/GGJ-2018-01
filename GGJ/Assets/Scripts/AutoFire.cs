@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoFire : MonoBehaviour
 {
-
+    public float initialDelay;
     private Gun gun;
 
     // Use this for initialization
@@ -16,6 +16,9 @@ public class AutoFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gun.Shoot();
+        if (Time.time > initialDelay)
+        {
+            gun.Shoot();
+        }
     }
 }

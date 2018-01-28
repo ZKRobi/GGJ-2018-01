@@ -17,7 +17,7 @@ public class Interacting : MonoBehaviour
     {
         RaycastHit hitInfo;
         var canInteract = Physics.Raycast(this.transform.position, this.transform.forward, out hitInfo, interactionDistance, 1 << 10);
-
+        Debug.DrawRay(transform.position, transform.forward * interactionDistance);
         if (canInteract)
         {
             var other = hitInfo.transform.gameObject.GetComponent<Interactible>();

@@ -53,8 +53,6 @@ GameObject:
   - component: {fileID: 114752229422900242}
   - component: {fileID: 114607329092949244}
   - component: {fileID: 82823473371699456}
-  - component: {fileID: 114187487843988756}
-  - component: {fileID: 114703395638184710}
   m_Layer: 0
   m_Name: turret1A
   m_TagString: Enemy
@@ -85,8 +83,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420027453657612}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 270, y: 15, z: 360}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4248857719671874}
@@ -335,23 +333,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114187487843988756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1420027453657612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecfeea0cb2ae7ba46a60433b87ba7718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpawn: {fileID: 0}
-  gunType: 0
-  roundsPerMin: 0
-  shellEjectionPoint: {fileID: 0}
-  shell: {fileID: 0}
-  shellParentObject: {fileID: 0}
 --- !u!114 &114607329092949244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -363,17 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e58674e4691d441922341f08a613a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114703395638184710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1420027453657612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e58674e4691d441922341f08a613a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  initialDelay: 0
 --- !u!114 &114752229422900242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,5 +360,5 @@ MonoBehaviour:
   gunType: 0
   roundsPerMin: 30
   shellEjectionPoint: {fileID: 4875821051838992}
-  shell: {fileID: 54009757962325642, guid: 80c753c9de9cb5145946f38767b021db, type: 2}
+  shell: {fileID: 54469381248018820, guid: b1274f3175bd5d547ae63496e8fd00ad, type: 2}
   shellParentObject: {fileID: 0}
